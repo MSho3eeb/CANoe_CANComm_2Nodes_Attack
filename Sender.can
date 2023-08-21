@@ -1,0 +1,35 @@
+﻿/*@!Encoding:65001*/
+includes
+{
+  
+}
+
+variables
+{
+  message 0x1 WarningMsg;
+  message 0x33 Speed;
+  message 0x55 Temp;
+  msTimer timerr;
+  msTimer sTimer;
+}
+
+on timer sTimer{
+  Speed.Speed = @`sysVar::Speed;
+  Temp.TempSignal = @`sysVar::Temp;
+  output(Temp);
+  output(Speed);
+  setTimer(sTimer, 10);
+}
+on timer timerr
+{
+  //WarningMsg.WarningSignal ^= 1;
+  //output(WarningMsg);
+  //setTimer(timerr, 500);
+}
+
+on start
+{
+  //setTimer(timerr, 500);
+  setTimer(sTimer, 10);
+}
+

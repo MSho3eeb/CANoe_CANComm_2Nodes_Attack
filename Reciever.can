@@ -1,0 +1,29 @@
+﻿/*@!Encoding:65001*/
+includes
+{
+  
+}
+
+variables
+{
+  message CAN1::WarnAck warn0;
+  //message CAN1::SpeedAck SAck;
+  //message CAN1::TempAck TAck;
+}
+
+on message WarningMsg{
+  warn0.WarningSignal = ~(this.WarningSignal);
+  //output(warn0);
+}
+on message Speed{
+  @`sysVar::SpeedPresent = this.Speed;
+}
+on message Temp{
+  @`sysVar::TempPresent = this.TempSignal;
+}
+
+//on timer timerk
+//{
+//  sysVar::Speed+=1;
+//}
+

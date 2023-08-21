@@ -1,0 +1,69 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: Reciever Sender
+VAL_TABLE_ WarningVal 1 "Warning" 0 "NoWarning" ;
+
+
+BO_ 0 FloodMSG: 8 Sender
+ SG_ FLOOD : 0|12@1+ (1,0) [0|4095] "" Vector__XXX
+
+BO_ 102 TempAck: 1 Vector__XXX
+ SG_ TempSignal : 0|8@1- (1,0) [0|0] ""  Reciever
+
+BO_ 85 Temp: 1 Sender
+ SG_ TempSignal : 0|8@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 68 SpeedAck: 1 Vector__XXX
+ SG_ Speed : 0|8@1+ (1,0) [0|255] ""  Reciever
+
+BO_ 51 Speed: 8 Sender
+ SG_ Speed : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2 WarnAck: 1 Vector__XXX
+ SG_ WarningSignal : 0|1@1+ (1,0) [0|1] ""  Reciever
+
+BO_ 1 WarningMsg: 1 Sender
+ SG_ WarningSignal : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+
+
+
+BA_DEF_  "MultiplexExtEnabled" ENUM  "No","Yes";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "MultiplexExtEnabled" "No";
+BA_DEF_DEF_  "BusType" "CAN";
+VAL_ 2 WarningSignal 1 "Warning" 0 "NoWarning" ;
+VAL_ 1 WarningSignal 1 "Warning" 0 "NoWarning" ;
+

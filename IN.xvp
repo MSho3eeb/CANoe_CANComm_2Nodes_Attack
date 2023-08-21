@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<Panel Type="Vector.CANalyzer.Panels.PanelSerializer, Vector.CANalyzer.Panels.Serializer, Version=17.2.88.0, Culture=neutral, PublicKeyToken=null">
+  <Object Type="Vector.CANalyzer.Panels.Runtime.Panel, Vector.CANalyzer.Panels.Common, Version=17.2.88.0, Culture=neutral, PublicKeyToken=null" Name="Panel" Children="Controls" ControlName="Panel2">
+    <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=17.2.88.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl3" Children="Controls" ControlName="Static Text 3">
+      <Property Name="Name">StaticTextControl3</Property>
+      <Property Name="Size">36, 13</Property>
+      <Property Name="Location">454, 63</Property>
+      <Property Name="Text">TEMP</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=17.2.88.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl2" Children="Controls" ControlName="Static Text 2">
+      <Property Name="Name">StaticTextControl2</Property>
+      <Property Name="Size">42, 13</Property>
+      <Property Name="Location">87, 63</Property>
+      <Property Name="Text">SPEED</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=17.2.88.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl1" Children="Controls" ControlName="Static Text 1">
+      <Property Name="Name">StaticTextControl1</Property>
+      <Property Name="Size">220, 37</Property>
+      <Property Name="Location">183, 2</Property>
+      <Property Name="Font">Microsoft Sans Serif, 24pt</Property>
+      <Property Name="Text">DASHBOARD</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.MeterControl, Vector.CANalyzer.Panels.CommonControls, Version=17.2.88.0, Culture=neutral, PublicKeyToken=null" Name="MeterControl2" ControlName="Meter 2">
+      <Property Name="Name">MeterControl2</Property>
+      <Property Name="Size">225, 180</Property>
+      <Property Name="Location">353, 88</Property>
+      <Property Name="SymbolConfiguration">8;16;sysVar;;;TempPresent;1;;;-1;;;;;;0</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.MeterControl, Vector.CANalyzer.Panels.CommonControls, Version=17.2.88.0, Culture=neutral, PublicKeyToken=null" Name="MeterControl1" ControlName="Meter 1">
+      <Property Name="Name">MeterControl1</Property>
+      <Property Name="Size">225, 180</Property>
+      <Property Name="Location">2, 88</Property>
+      <Property Name="ScaleMax">255</Property>
+      <Property Name="SymbolConfiguration">8;16;sysVar;;;SpeedPresent;1;;;-1;;;;;;0</Property>
+    </Object>
+    <Property Name="Name">Panel</Property>
+    <Property Name="Size">580, 270</Property>
+    <Property Name="BackColor">White</Property>
+  </Object>
+</Panel>
